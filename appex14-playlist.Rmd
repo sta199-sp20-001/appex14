@@ -1,0 +1,62 @@
+---
+title: "CLT-based Inference"
+author: ""
+date: ""
+output: 
+  html_document:
+    toc: true
+    number_sections: false
+    toc_float: true
+    df_print: paged
+---
+
+```{r set-up, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
+                      comment = "#>", highlight = TRUE,
+                      fig.align = "center")
+```
+
+
+# Packages and Data
+
+```{r packages}
+library(tidyverse)
+library(infer)
+```
+
+The data in `songs` contain the length in minutes of the 3,000 songs on a
+person's phone (consider this as the entire population).
+
+```{r load_data}
+songs <- read_csv("data/songs.csv")
+```
+
+# Exercises
+
+## Exercise 1
+
+What is the population mean and standard deviation of song length?
+
+## Exercise 2
+
+What is the probability that a randomly selected song is longer than 5
+minutes long?
+
+## Exercise 3
+
+Set the seed to `53251` and take a random sample of 100 songs. 
+
+Construct a 95% confidence interval for the mean song length using your 
+random sample. Did your interval contain the true population mean?
+
+## Exercise 4
+
+On a 6 hour drive, what is the probability that a randomly selected playlist
+of 100 songs lasts the length of the trip?
+
+## Stage, commit and push
+
+1. Stage your modified files.
+2. Commit your changes with an informative message.
+3. Push your changes to your GitHub repo.
+4. Verify your files were updated on GitHub.
